@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FrmCount.aspx" />
+    <Content Include="FrmLogin.aspx" />
     <Content Include="FrmStateMain.aspx" />
     <Content Include="FrmStateShow.aspx" />
     <Content Include="Global.asax" />
@@ -80,6 +81,13 @@
     </Compile>
     <Compile Include="FrmCount.aspx.designer.cs">
       <DependentUpon>FrmCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.aspx.cs">
+      <DependentUpon>FrmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.aspx.designer.cs">
+      <DependentUpon>FrmLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmStateMain.aspx.cs">
       <DependentUpon>FrmStateMain.aspx</DependentUpon>

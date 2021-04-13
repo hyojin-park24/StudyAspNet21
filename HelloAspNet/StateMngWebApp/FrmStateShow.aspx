@@ -19,6 +19,9 @@
             Cookies : <asp:TextBox ID="TxtCookies" runat="server"></asp:TextBox><br />
             ViewState : <asp:TextBox ID="TxtViewState" runat="server"></asp:TextBox><br />
 
+            <hr />
+            <asp:Label ID="LblSiteName" runat="server" /><br />
+            <asp:Label ID="LblConnectionString" runat="server" />
         </div>
     </form>
 </body>

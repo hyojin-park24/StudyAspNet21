@@ -11,7 +11,7 @@ namespace StateMngWebApp
 {
 
 
-    public partial class FrmStateShow
+    public partial class FrmLogin
     {
 
         /// <summary>
@@ -24,66 +24,39 @@ namespace StateMngWebApp
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// TxtApplication 컨트롤입니다.
+        /// TxtUserID 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtApplication;
+        protected global::System.Web.UI.WebControls.TextBox TxtUserID;
 
         /// <summary>
-        /// TxtSession 컨트롤입니다.
+        /// TxtPassword 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtSession;
+        protected global::System.Web.UI.WebControls.TextBox TxtPassword;
 
         /// <summary>
-        /// TxtCache 컨트롤입니다.
+        /// ChkSaveUserID 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCache;
+        protected global::System.Web.UI.WebControls.CheckBox ChkSaveUserID;
 
         /// <summary>
-        /// TxtCookies 컨트롤입니다.
+        /// BtnLogin 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCookies;
-
-        /// <summary>
-        /// TxtViewState 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtViewState;
-
-        /// <summary>
-        /// LblSiteName 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblSiteName;
-
-        /// <summary>
-        /// LblConnectionString 컨트롤입니다.
-        /// </summary>
-        /// <remarks>
-        /// 자동 생성 필드입니다.
-        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblConnectionString;
+        protected global::System.Web.UI.WebControls.Button BtnLogin;
     }
 }

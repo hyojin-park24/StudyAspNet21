@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -20,6 +21,9 @@ namespace StateMngWebApp
                 TxtCookies.Text = Server.UrlDecode(Request.Cookies["Now"].Value);
             if (ViewState["Now"] != null)
                 TxtViewState.Text = ViewState["Now"].ToString();
+
+            LblSiteName.Text = WebConfigurationManager.AppSettings["SITE_NAME"].ToString();
+            LblConnectionString.Text = WebConfigurationManager.ConnectionStrings["Local_Connstring"].ConnectionString;
         }
     }
 }
