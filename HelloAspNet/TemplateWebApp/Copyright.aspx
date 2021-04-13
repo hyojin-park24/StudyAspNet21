@@ -1,3 +1,0 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Copyright.ascx.cs" Inherits="TemplateWebApp.Copyright" %>
-<div class="text-center">Copyright(c)PKNU.All rights reserved.</div>
-© 2021 GitHub, Inc.

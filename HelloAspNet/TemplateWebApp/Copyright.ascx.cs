@@ -5,10 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
 namespace TemplateWebApp
 {
-    public partial class Main : System.Web.UI.MasterPage
+    public partial class Copyright : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

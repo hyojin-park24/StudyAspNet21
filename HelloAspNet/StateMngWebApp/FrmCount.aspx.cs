@@ -5,14 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
-namespace TemplateWebApp
+namespace StateMngWebApp
 {
-    public partial class Main : System.Web.UI.MasterPage
+    public partial class FrmCount : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            LblNow.Text = Application["Visit"].ToString();
         }
     }
 }
