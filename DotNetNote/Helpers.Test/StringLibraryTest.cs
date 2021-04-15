@@ -28,12 +28,29 @@ namespace Helpers.Test
             Assert.AreEqual(expected, actual);
         }
 
+        //[Ignore] 테스팅에서 제외
         [TestMethod]
         public void AddTest()
         {
             var expected = 10;
             var actual = (5 + 5);
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void IsPhotoTest()
+        {
+            var imagePath = @"D:\GitRepository\StudyDesktopApp\Source\32.png";
+            bool result = BoardLibrary.IsPhoto(imagePath); //결과가 돌아옴 true/false로
+            Assert.IsTrue(result, "file extension must be png, jpg, gif");
+        }
+
+        [TestMethod]
+        public void IsNotPhotoTest()
+        {
+            var imagePath = @"D:\GitRepository\StudyDesktopApp\Source\32.pdf";
+            bool result = BoardLibrary.IsPhoto(imagePath); //결과가 돌아옴 true/false로
+            Assert.IsFalse(result, "file extension must be png, jpg, gif");
         }
     }
 }
