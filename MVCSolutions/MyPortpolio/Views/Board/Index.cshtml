@@ -1,9 +1,13 @@
-﻿@model IEnumerable<MyPortpolio.Models.Board>
+﻿@model IPagedList<MyPortpolio.Models.Board>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_LoginLayout.cshtml";
 }
+
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common;
 
 <h1>Index</h1>
 
@@ -14,19 +18,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Id)
+                @Html.DisplayNameFor(model => model.First().Id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Subject)
+                @Html.DisplayNameFor(model => model.First().Subject)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Writer)
+                @Html.DisplayNameFor(model => model.First().Writer)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Password)
+                @Html.DisplayNameFor(model => model.First().Password)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReadCount)
+                @Html.DisplayNameFor(model => model.First().RegDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().ReadCount)
             </th>
             <th></th>
         </tr>
@@ -47,6 +54,9 @@
                 @Html.DisplayFor(modelItem => item.Password)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.RegDate)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.ReadCount)
             </td>
             <td>
@@ -58,3 +68,11 @@
 }
     </tbody>
 </table>
+<div class="pull-center">
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index",
+    new { page}),
+    new PagedListRenderOptionsBase { LiElementClasses = new string[] { "page-item"},
+        PageClasses = new string[] { "page-link"},
+        Display = PagedListDisplayMode.IfNeeded
+    })
+</div>
