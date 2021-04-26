@@ -96,7 +96,7 @@ namespace MyPortpolio.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Subject,Contents,Writer,Password,ReadCount")] Board board)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Subject,Contents,Writer,Password,ReadCount,RegDate")] Board board)
         {
             if (id != board.Id)
             {
@@ -107,6 +107,7 @@ namespace MyPortpolio.Controllers
             {
                 try
                 {
+                    
                     _context.Update(board);
                     await _context.SaveChangesAsync();
                 }

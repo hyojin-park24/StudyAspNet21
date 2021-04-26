@@ -27,22 +27,22 @@ namespace MyPortpolio.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult>Login([Bind ("Email,Password")] Account account)
+        public async Task<IActionResult> Login([Bind("Email,Password")] Account account)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var result = CheckAccount(account.Email, account.Password);
-                if (result == null) 
+                if (result == null)
                 {
                     //계정이 없음 화면을 Home/Index 이동 
                     ViewBag.Message = "해당 계정이 없습니다";
                     return View("Login");
-                                    }
+                }
                 else
                 {
                     //로그인
-                    HttpContext.Session.SetString("UserEamil", result.Email);
-                    return RedirectToAction("/Home/Index");
+                    HttpContext.Session.SetString("UserEmail", result.Email);
+                    return RedirectToAction("Index", "Home");
                 }
             }
 
@@ -51,7 +51,16 @@ namespace MyPortpolio.Controllers
 
         private Account CheckAccount(string email, string password)
         {
-            return _context.Account.SingleOrDefault(a => a.Email.Equals(email) && a.Password.Equals(password));
+            var result = _context.Account.SingleOrDefault(a => a.Email.Equals(email) && a.Password.Equals(password));
+            //var result = _context.Account.SingleOrDefault(a => a.Email.Equals(email));
+
+            return result;
         }
-    }   
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
+        }
+    }
 }
